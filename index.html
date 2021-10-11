@@ -7,11 +7,14 @@
         </title>
     </head>
     <body>
+        
         <center>
-                <form name="inscription" method="POST" action="" enctype="multipart/form-data">
-                    <label> Email : </label><input type="email" required="required"> <br>
-                    <label>Password : </label> <input type="password" required="required"> <br>
-                    <input type="button" value="Connect" class="connect-button" required="required">
+            <h1>Se connecter </h1> <br>
+
+                <form name="inscription" method="post/get" action="php/connection.php" >
+                    <label> Email : </label> <input type="email"  name="email" required="required" > <br>
+                    <label>Password : </label> <input type="password" name="email" required="required" > <br>
+                    <input type="submit" value="Connect" class="connect-button" >
 
             </form> 
             <a href="registration.html">Creer un compte </a>
