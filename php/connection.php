@@ -4,28 +4,28 @@
     <center>
 <?php
 
-//create connection
 
-$conn= mysqli_connect ("localhost","root","","chatting-website");
 
-if($conn==false){
-    die("error, could not connect");
-}
-else echo 'Connected' ;
+    $success = mysqli_connect ("localhost","root","","chatting-website");
 
-// form
-$email=$_REQUEST['email'];
-$pdw=$_REQUEST['pdw'];
+    ?>
+    <?php
+    $email = $_REQUEST['email'];
+    $password = $_REQUEST['pwd'];
+    $sql = mysqli_query($success,"SELECT * FROM users WHERE email = '".$_REQUEST['email']."' and mdp = '".($_REQUEST['pwd'])."'");
+    $row = mysqli_num_rows($sql);
+    if($row > 0 )
+    {
+      session_start();
+      $_SESSION['email'] = $_REQUEST['email'];
+      $_SESSION['pwd'] = $_REQUEST['pwd'];
+      echo "<h1>login done</h1>";
+    }else {
+      echo "<h2>fail login</h2> ";
+    }
 
-$sql="insert into users(email,mdp) values ('$email','$pdw')  "; 
 
-// if succesfull
-if (mysqli_query($conn,$sql)){
-    echo "<h3> connection réussie </h3>";
-}
-else echo"<h3> Erreur dans la connection  </h3>";
 
-mysqli_close($conn);
 ?>
 </center>
 </body>

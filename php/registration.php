@@ -17,10 +17,10 @@ else echo 'Connected' ;
 $nom=$_REQUEST['nom'];
 $prenom=$_REQUEST['prenom'];
 $email=$_REQUEST['email'];
-$pdw=$_REQUEST['pdw'];
+$pwd=$_REQUEST['pwd'];
 $tel=$_REQUEST['tel'];
 
-$sql="insert into users(nom,prenom,email,mdp,numtel) values ('$nom','$prenom','$email','$pdw','$tel') " ;
+$sql="insert into users(nom,prenom,email,mdp,numtel) values ('$nom','$prenom','$email','$pwd','$tel') " ;
 
 // if succesfull
 if (mysqli_query($conn,$sql)){
