@@ -2,21 +2,22 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/scripts.js"></script>
         <title> registration</title>
     </head>
 
     <body>
         <center>
         
-            <form action="registration.php" method="post/get" name="registration_form">
+            <form action="php/registration.php" method="post/get" name="registration_form">
                 <h1> inscription</h1> <br>
-                <label> Nom : </label><input type="text" name="nom"> <br>
-                <label> Prenom : </label><input type="text" name="prenom"> <br>
-                <label> Email : </label><input type="email" name="email"> <br>
-                <label>Password : </label> <input type="password" name="pdw"> <br>
-                <label> numero de telephone : (facultatif) </label><input type="tel" name="tel"> <br>
+                <label> Nom : </label><input type="text" name="nom" required="required"> <br>
+                <label> Prenom : </label><input type="text" name="prenom" required="required"> <br>
+                <label> Email : </label><input type="email" name="email" required="required"> <br>
+                <label>Password : </label> <input type="password" name="pdw" required="required"> <br>
+                <label> numero de telephone : (facultatif) </label><input type="tel" name="tel" required="required"> <br>
             
-                <input type="submit" value="inscription" class="connect-button">
+                <input type="submit" value="Valider" class="connect-button">
 
 
             </form> 
