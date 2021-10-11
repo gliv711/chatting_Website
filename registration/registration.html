@@ -1,3 +1,10 @@
+<?php
+    if(isset($_POST["inscription"])){
+        include("connexion.php");
+        $req=$pdo->prepare("insert into users(nom,prenom,email,pdw,) values(?,?,?,?);
+        $req->execute ;
+    }
+?>
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
@@ -7,13 +14,13 @@
     <body>
         <div id="box">
             <form>
-                <label> Nom : </label><input type="email"> <br>
-                <label> Prénom : </label><input type="email"> <br>
-                <label> Email : </label><input type="email"> <br>
-                <label>Password : </label> <input type="password"> <br>
-                <label> numero de telephone : (facultatif) </label><input type="email"> <br>
-                <label> Photo : </label><input type="file" name="image" > <br>
-                <input type="button" value="Inscription" class="connect-button">
+                <label> Nom : </label><input type="text" name="nom"> <br>
+                <label> Prénom : </label><input type="text" name="prenom"> <br>
+                <label> Email : </label><input type="email" name="email"> <br>
+                <label>Password : </label> <input type="password" name="pdw"> <br>
+                <label> numero de telephone : (facultatif) </label><input type="tel" name="tel"> <br>
+                <label> Photo : </label><input type="file" name="image" name="photo" > <br>
+                <input type="button" value="inscription" class="connect-button">
 
 
             </form> 
