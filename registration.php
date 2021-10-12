@@ -5,12 +5,41 @@ if (isset($_SESSION["email"])){
 ?>
 <html>
     <head>
-        
+    <link rel="stylesheet" href="styles.css">
         <script src="js/scripts.js"></script>
         <title> registration</title>
     </head>
 
     <body>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           
+            <ul>
+                <li>
+                    <a href="index.php" >
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Se connecter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="registration.php" class="active">Creer un compte </a>
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        
+                    </a>
+                </li>
+                <li>
+                    
+                
+                
+            </ul>
+            
+            
+        </div>
+
+        </div>
+
+    </div>
         <center>
         
             <form action="php/registration.php" method="post/get" name="registration_form">

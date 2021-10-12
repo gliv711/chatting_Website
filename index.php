@@ -6,12 +6,41 @@ if (isset($_SESSION["email"])){
 
 <html>
     <head>
-        
+    <link rel="stylesheet" href="styles.css">
         <title>
             Login Page
         </title>
     </head>
     <body>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           
+            <ul>
+                <li>
+                    <a href="index.php" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Se connecter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="registration.php">Creer un compte </a>
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        
+                    </a>
+                </li>
+                <li>
+                    
+                
+                
+            </ul>
+            
+            
+        </div>
+
+        </div>
+
+    </div>
         
         <center>
             <h1>Se connecter </h1> <br>
@@ -22,7 +51,7 @@ if (isset($_SESSION["email"])){
                     <input type="submit" value="Connect" class="connect-button" >
 
             </form> 
-            <a href="registration.php">Creer un compte </a>
+            
         </center>
-    </body>
+    </body>    
 </html>

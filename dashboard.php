@@ -1,6 +1,18 @@
 <?php
+
+$success = mysqli_connect ("localhost","root","","chatting-website");
+
 // On démarre la session (ceci est indispensable dans toutes les pages de notre section membre)
 session_start ();
+$x = $_SESSION['email'];
+$sql=mysqli_query($success,"SELECT nom FROM users where email = '$x'");
+$row = mysqli_fetch_row($sql) ;
+
+$sql2=mysqli_query($success,"SELECT prenom FROM users where email ='$x'");
+$row2 = mysqli_fetch_row($sql2) ;
+
+$sql3=mysqli_query($success,"SELECT numtel FROM users where email ='$x'");
+$row3 = mysqli_fetch_row($sql3) ;
 
 // On récupère nos variables de session
 if (isset($_SESSION['email']) && isset($_SESSION['pwd'])) {
@@ -10,33 +22,72 @@ if (isset($_SESSION['email']) && isset($_SESSION['pwd'])) {
 	<head> 
 	<link rel="stylesheet" href="styles.css">
 	<script src="/js/scripts.js"></script>
-		<title>Page de notre section membre</title> 
+		<title>Dashboard</title> 
 	</head> 
 	<body> 
-	<p> 
-	Votre login est '.$_SESSION['email'].' et votre mot de passe est '.$_SESSION['pwd']. '. 
-	</p> 
 	<br />
-	 <a href="./php/logout.php">Déconnection</a> 
+	
 
-	<div id="mySidenav" class="sidenav">
-	 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	 <a href="#">About</a>
-	 <a href="#">Services</a>
-	 <a href="#">Clients</a>
-	 <a href="#">Contact</a>
-   </div>
-   
-   <!-- Use any element to open the sidenav -->
-   <span onclick="openNav()">open</span>
-   
-   <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-   <div id="main">
-	 Home
-   </div>
-	</body> 
+	 <html> 
+	 <head> 
+	 <link rel="stylesheet" href="styles.css">
+	 <script src="/js/scripts.js "></script>
+		 <title>Page de notre section membre</title> 
+	 </head> 
+	 <body> 
+	 
+	  <div class="wrapper">
+		 <!--Top menu -->
+		 <div class="sidebar">
+			<!--profile image & text-->
+			<div class="profile">';
+			 echo '<h3>'.$row2[0].' '.$row[0]. '</h3>';
+			 echo '<p> '.$row3[0].'</p>' ;
+				 
+			 echo '
+			 </div>
+			 <!--menu item-->
+			 <ul>
+				 <li>
+					 <a href="#" class="active">
+						 <span class="icon"><i class="fas fa-home"></i></span>
+						 <span class="item">Home</span>
+					 </a>
+				 </li>
+				 <li>
+					 <a href="#">
+						 <span class="icon"><i class="fas fa-desktop"></i></span>
+						 <span class="item">Chat</span>
+					 </a>
+				 </li>
+				
+				 
+				 
+				 <li>
+					 <a href="#">
+						 <span class="icon"><i class="fas fa-cog"></i></span>
+						 <span class="item">Settings</span>
+					 </a>
+					 
 
-	</html>' ;	
+					 <a href="./php/logout.php">Déconnection</a> 
+					 <span class="icon"><i class="fas fa-cog"></i></span>
+						 
+				 </li>
+				 
+				 
+			 </ul>
+			 
+			 
+		 </div>
+ 
+		 </div>
+ 
+	 </div>
+	 
+	 </body> 
+ 
+	 </html>' ;	
 }
 else {
 	echo '<html> <head> <title> erreur </title> 
