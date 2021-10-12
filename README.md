@@ -2,6 +2,8 @@
 date of starting this :10/10/2021
 time :18:33
 
+Summary : website needs to handle pictures
+
 *** Settings.php
 
 edit info : done 
