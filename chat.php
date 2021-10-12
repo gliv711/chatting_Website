@@ -64,7 +64,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['pwd'])) {
 				 
 				 
 				 <li>
-					 <a href="#">
+					 <a href="settings.php">
 						 <span class="icon"><i class="fas fa-cog"></i></span>
 						 <span class="item">Settings</span>
 					 </a>
