@@ -49,13 +49,13 @@ if (isset($_SESSION['email']) && isset($_SESSION['pwd'])) {
 			 <!--menu item-->
 			 <ul>
 				 <li>
-					 <a href="dashboard.php" class="active">
+					 <a href="dashboard.php" >
 						 <span class="icon"><i class="fas fa-home"></i></span>
 						 <span class="item">Dashboard</span>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="chat.php">
+					 <a href="chat.php" class="active">
 						 <span class="icon"><i class="fas fa-desktop"></i></span>
 						 <span class="item">Chat</span>
 					 </a>
@@ -85,7 +85,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['pwd'])) {
  
 	 </div>
 <br>
-	 <center> <p> Appuiyer sur le bouton CHAT pour Commencer </p> </center>
+	 
 	 
 	 </body> 
  
