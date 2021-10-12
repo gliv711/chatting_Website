@@ -22,7 +22,7 @@
       while ($row = mysqli_fetch_row($sql2)) {
         echo "<h1> Bienvenue ".$row[0]." " .$row[1]. "</h1>";
     }
-      echo "<meta http-equiv='refresh' content='2; URL=/chatting_website/php/dashboard.php' />";
+      echo "<meta http-equiv='refresh' content='2; URL=/chatting_website/dashboard.php' />";
       echo "<a href='logout.php'> Se deconnecter </a>" ;
     }else { 
       echo "<h2>fail login</h2> ";
