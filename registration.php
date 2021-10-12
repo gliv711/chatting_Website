@@ -1,4 +1,8 @@
-
+<?php
+if (isset($_SESSION["email"])){
+    header ("location : dashboard.php");
+}
+?>
 <html>
     <head>
         
@@ -22,7 +26,7 @@
 
             </form> 
 <br>
-            <p>Vous avez deja un compte ? </p><a href="index.html"> Se connecter  </a>
+            <p>Vous avez deja un compte ? </p><a href="index.php"> Se connecter  </a>
     </center>
     </body>
 </html>
