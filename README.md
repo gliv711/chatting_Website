@@ -4,6 +4,8 @@ time :18:33
 
 
 date of suspension : 12/11/2021
+![image](https://user-images.githubusercontent.com/76585797/143075779-8b797e06-142f-4e7b-87e3-a59be4f5b2d5.png)
+
 
 Summary : website doesnt handle pictures
 
